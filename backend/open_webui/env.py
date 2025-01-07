@@ -108,7 +108,7 @@ WEBUI_NAME = os.environ.get("WEBUI_NAME", "TeledocAI")
 if WEBUI_NAME != "TeledocAI":
     WEBUI_NAME += " (TeledocAI)"
 
-WEBUI_FAVICON_URL = "https://openwebui.com/favicon.png"
+WEBUI_FAVICON_URL = "https://i.postimg.cc/fRZXKtYX/favicon.png"
 
 
 ####################################
