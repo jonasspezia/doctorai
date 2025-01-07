@@ -108,8 +108,8 @@
 
 		<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
 			Teledoc
-			<a href="https://teledocmedical.com" target="_blank">Twemoji</a> Journey
-			<a href="https://teledocmedical.com/" target="_blank"> Medical®</a>.
+			<a href="https://teledocmedical.com" target="_blank"> Journey</a> Medical
+			<a href="https://teledocmedical.com/" target="_blank">®</a>.
 		</div>
 
 		<div class="flex space-x-1">
@@ -120,10 +120,10 @@
 				/>
 			</a>
 
-			<a href="https://x.com/drjonasspezia" target="_blank">
+			<a href="https://www.instagram.com/drjonasspezia" target="_blank">
 				<img
 					alt="X (formerly Twitter) Siga!"
-					src="https://img.shields.io/twitter/follow/Dr. Jonas Spezia"
+					src="https://img.shields.io/twitter/Siga/Dr. Jonas Spezia | CRMRS52340"
 				/>
 			</a>
 
@@ -142,8 +142,8 @@
 			{$i18n.t('2025')}
 			<a
 				class=" text-gray-500 dark:text-gray-300 font-medium"
-				href="https://github.com/tjbck"
-				target="_blank">Timothy J. Baek</a
+				href="https://teledocmedical.com"
+				target="_blank">Teledoc Journey Medical</a
 			>
 		</div>
 	</div>
