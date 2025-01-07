@@ -20,7 +20,7 @@ For more information, be sure to check out our [TeledocAI Documentation](https:/
 
 - 🎤📹 **Hands-Free Voice/Video Call**: Experience seamless communication with integrated hands-free voice and video call features, allowing for a more dynamic and interactive chat environment.
 
-- 🛠️ **Model Builder**: Easily create Ollama models via the Web UI. Create and add custom characters/agents, customize chat elements, and import models effortlessly through [TeledocAI Community](https://openwebui.com/) integration.
+- 🛠️ **Model Builder**: Easily create Ollama models via the Web UI. Create and add custom characters/agents, customize chat elements, and import models effortlessly through [TeledocAI Community](https://teledocmedical.ai/) integration.
 
 - 🐍 **Native Python Function Calling Tool**: Enhance your LLMs with built-in code editor support in the tools workspace. Bring Your Own Function (BYOF) by simply adding your pure Python functions, enabling seamless integration with LLMs.
 
@@ -46,7 +46,7 @@ Want to learn more about TeledocAI's features? Check out our [TeledocAI document
 
 ## 🔗 Also Check Out TeledocAI Community!
 
-Don't forget to explore our sibling project, [TeledocAI Community](https://openwebui.com/), where you can discover, download, and explore customized Modelfiles. TeledocAI Community offers a wide range of exciting possibilities for enhancing your chat interactions with TeledocAI! 🚀
+Don't forget to explore our sibling project, [TeledocAI Community](https://teledocmedical.ai/), where you can discover, download, and explore customized Modelfiles. TeledocAI Community offers a wide range of exciting possibilities for enhancing your chat interactions with TeledocAI! 🚀
 
 ## How to Install 🚀
 
