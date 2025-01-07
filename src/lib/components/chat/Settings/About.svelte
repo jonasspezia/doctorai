@@ -95,7 +95,7 @@
 			<hr class=" dark:border-gray-850" />
 
 			<div>
-				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Ollama Version')}</div>
+				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Version')}</div>
 				<div class="flex w-full">
 					<div class="flex-1 text-xs text-gray-700 dark:text-gray-200">
 						{ollamaVersion ?? 'N/A'}
@@ -107,39 +107,39 @@
 		<hr class=" dark:border-gray-850" />
 
 		<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
-			Emoji graphics provided by
-			<a href="https://github.com/jdecked/twemoji" target="_blank">Twemoji</a>, licensed under
-			<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a>.
+			Teledoc
+			<a href="https://teledocmedical.com" target="_blank">Twemoji</a> Journey
+			<a href="https://teledocmedical.com/" target="_blank"> Medical®</a>.
 		</div>
 
 		<div class="flex space-x-1">
-			<a href="https://discord.gg/5rJgQTnV4s" target="_blank">
+			<a href="https://teledocmedical.com" target="_blank">
 				<img
-					alt="Discord"
-					src="https://img.shields.io/badge/Discord-Open_WebUI-blue?logo=discord&logoColor=white"
+					alt="Conheça o Copiloto"
+					src="https://img.shields.io/badge/Conheça-O Copiloto-blue?logo=discord&logoColor=white"
 				/>
 			</a>
 
-			<a href="https://twitter.com/OpenWebUI" target="_blank">
+			<a href="https://x.com/drjonasspezia" target="_blank">
 				<img
-					alt="X (formerly Twitter) Follow"
-					src="https://img.shields.io/twitter/follow/OpenWebUI"
+					alt="X (formerly Twitter) Siga!"
+					src="https://img.shields.io/twitter/follow/Dr. Jonas Spezia"
 				/>
 			</a>
 
-			<a href="https://github.com/open-webui/open-webui" target="_blank">
+			<a href="https://doctorai.teledocmedical.ai" target="_blank">
 				<img
-					alt="Github Repo"
-					src="https://img.shields.io/github/stars/open-webui/open-webui?style=social&label=Star us on Github"
+					alt="Website TeledocAI"
+					src="https://img.shields.io/github/stars/open-webui/open-webui?style=social&label=Website TeledocAI"
 				/>
 			</a>
 		</div>
 
 		<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
-			{#if !$WEBUI_NAME.includes('Open WebUI')}
+			{#if !$WEBUI_NAME.includes('TeledocAI')}
 				<span class=" text-gray-500 dark:text-gray-300 font-medium">{$WEBUI_NAME}</span> -
 			{/if}
-			{$i18n.t('Created by')}
+			{$i18n.t('2025')}
 			<a
 				class=" text-gray-500 dark:text-gray-300 font-medium"
 				href="https://github.com/tjbck"
