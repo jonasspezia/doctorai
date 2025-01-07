@@ -4,8 +4,6 @@
 
 For more information, be sure to check out our [TeledocAI Documentation](https://teledocmedical.ai/).
 
-![TeledocAI Demo](./demo.gif)
-
 ## Key Features of TeledocAI ⭐
 
 - 🚀 **Effortless Setup**: Install seamlessly using Docker or Kubernetes (kubectl, kustomize or helm) for a hassle-free experience with support for both `:ollama` and `:cuda` tagged images.
