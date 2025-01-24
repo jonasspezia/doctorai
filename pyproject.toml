@@ -1,8 +1,8 @@
 [project]
 name = "open-webui"
-description = "Open WebUI"
+description = "DoctorAI"
 authors = [
-    { name = "Timothy Jaeryang Baek", email = "tim@openwebui.com" }
+    { name = "Dr. Jonas Spezia | CRMRS52340 | CEO Teledoc", email = "teledoc@teledocmedical.com" }
 ]
 license = { file = "LICENSE" }
 dependencies = [
