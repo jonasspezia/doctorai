@@ -1,21 +1,9 @@
 # DoctorAI 👋
 
-![GitHub stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social)
-![GitHub forks](https://img.shields.io/github/forks/open-webui/open-webui?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/open-webui/open-webui?style=social)
-![GitHub repo size](https://img.shields.io/github/repo-size/open-webui/open-webui)
-![GitHub language count](https://img.shields.io/github/languages/count/open-webui/open-webui)
-![GitHub top language](https://img.shields.io/github/languages/top/open-webui/open-webui)
-![GitHub last commit](https://img.shields.io/github/last-commit/open-webui/open-webui?color=red)
-![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Follama-webui%2Follama-wbui&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
-[![Discord](https://img.shields.io/badge/Discord-Open_WebUI-blue?logo=discord&logoColor=white)](https://teledocmedical.com)
-[![][def]](https://github.com/sponsors/tjbck)
+![Teledoc Journey Medical](https://teledocmedical.com)
+**DoctorAI is an [extensible](https://teledocmedical.com), feature-rich, and user-friendly self-hosted AI platform designed to operate entirely offline.** It supports various LLM runners like **Ollama** and **OpenAI-compatible APIs**, with **built-in inference engine** for RAG, making it a **powerful AI deployment solution**.
 
-**DoctorAI is an [extensible](https://docs.openwebui.com/features/plugin/), feature-rich, and user-friendly self-hosted AI platform designed to operate entirely offline.** It supports various LLM runners like **Ollama** and **OpenAI-compatible APIs**, with **built-in inference engine** for RAG, making it a **powerful AI deployment solution**.
-
-For more information, be sure to check out our [DoctorAI Documentation](https://docs.openwebui.com/).
-
-![DoctorAI Demo](./demo.gif)
+For more information, be sure to check out our [DoctorAI Documentation](https://teledocmedical.com).
 
 ## Key Features of DoctorAI ⭐
 
@@ -33,7 +21,7 @@ For more information, be sure to check out our [DoctorAI Documentation](https://
 
 - 🎤📹 **Hands-Free Voice/Video Call**: Experience seamless communication with integrated hands-free voice and video call features, allowing for a more dynamic and interactive chat environment.
 
-- 🛠️ **Model Builder**: Easily create Ollama models via the Web UI. Create and add custom characters/agents, customize chat elements, and import models effortlessly through [DoctorAI Community](https://openwebui.com/) integration.
+- 🛠️ **Model Builder**: Easily create Ollama models via the Web UI. Create and add custom characters/agents, customize chat elements, and import models effortlessly through [DoctorAI Community](https://teledocmedical.com) integration.
 
 - 🐍 **Native Python Function Calling Tool**: Enhance your LLMs with built-in code editor support in the tools workspace. Bring Your Own Function (BYOF) by simply adding your pure Python functions, enabling seamless integration with LLMs.
 
@@ -51,15 +39,15 @@ For more information, be sure to check out our [DoctorAI Documentation](https://
 
 - 🌐🌍 **Multilingual Support**: Experience DoctorAI in your preferred language with our internationalization (i18n) support. Join us in expanding our supported languages! We're actively seeking contributors!
 
-- 🧩 **Pipelines, DoctorAI Plugin Support**: Seamlessly integrate custom logic and Python libraries into DoctorAI using [Pipelines Plugin Framework](https://github.com/open-webui/pipelines). Launch your Pipelines instance, set the OpenAI URL to the Pipelines URL, and explore endless possibilities. [Examples](https://github.com/open-webui/pipelines/tree/main/examples) include **Function Calling**, User **Rate Limiting** to control access, **Usage Monitoring** with tools like Langfuse, **Live Translation with LibreTranslate** for multilingual support, **Toxic Message Filtering** and much more.
+- 🧩 **Pipelines, DoctorAI Plugin Support**: Seamlessly integrate custom logic and Python libraries into DoctorAI using [Pipelines Plugin Framework](https://teledocmedical.com). Launch your Pipelines instance, set the OpenAI URL to the Pipelines URL, and explore endless possibilities. [Examples](https://teledocmedical.com) include **Function Calling**, User **Rate Limiting** to control access, **Usage Monitoring** with tools like Langfuse, **Live Translation with LibreTranslate** for multilingual support, **Toxic Message Filtering** and much more.
 
 - 🌟 **Continuous Updates**: We are committed to improving DoctorAI with regular updates, fixes, and new features.
 
-Want to learn more about DoctorAI's features? Check out our [DoctorAI documentation](https://docs.openwebui.com/features) for a comprehensive overview!
+Want to learn more about DoctorAI's features? Check out our [DoctorAI documentation](https://teledocmedical.com) for a comprehensive overview!
 
 ## 🔗 Also Check Out DoctorAI Community!
 
-Don't forget to explore our sibling project, [DoctorAI Community](https://openwebui.com/), where you can discover, download, and explore customized Modelfiles. DoctorAI Community offers a wide range of exciting possibilities for enhancing your chat interactions with DoctorAI! 🚀
+Don't forget to explore our sibling project, [DoctorAI Community](https://teledocmedical.com), where you can discover, download, and explore customized Modelfiles. DoctorAI Community offers a wide range of exciting possibilities for enhancing your chat interactions with DoctorAI! 🚀
 
 ## How to Install 🚀
 
@@ -86,7 +74,7 @@ This will start the DoctorAI server, which you can access at [http://localhost:8
 ### Quick Start with Docker 🐳
 
 > [!NOTE]  
-> Please note that for certain Docker environments, additional configurations might be needed. If you encounter any connection issues, our detailed guide on [DoctorAI Documentation](https://docs.openwebui.com/) is ready to assist you.
+> Please note that for certain Docker environments, additional configurations might be needed. If you encounter any connection issues, our detailed guide on [DoctorAI Documentation](https://teledocmedical.com) is ready to assist you.
 
 > [!WARNING]
 > When using Docker to install DoctorAI, make sure to include the `-v open-webui:/app/backend/data` in your Docker command. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.
@@ -148,11 +136,11 @@ After installation, you can access DoctorAI at [http://localhost:3000](http://lo
 
 ### Other Installation Methods
 
-We offer various installation alternatives, including non-Docker native installation methods, Docker Compose, Kustomize, and Helm. Visit our [DoctorAI Documentation](https://docs.openwebui.com/getting-started/) or join our [Discord community](https://teledocmedical.com) for comprehensive guidance.
+We offer various installation alternatives, including non-Docker native installation methods, Docker Compose, Kustomize, and Helm. Visit our [DoctorAI Documentation](https://teledocmedical.comgetting-started/) or join our [Discord community](https://teledocmedical.com) for comprehensive guidance.
 
 ### Troubleshooting
 
-Encountering connection issues? Our [DoctorAI Documentation](https://docs.openwebui.com/troubleshooting/) has got you covered. For further assistance and to join our vibrant community, visit the [DoctorAI Discord](https://teledocmedical.com).
+Encountering connection issues? Our [DoctorAI Documentation](https://teledocmedical.comtroubleshooting/) has got you covered. For further assistance and to join our vibrant community, visit the [DoctorAI Discord](https://teledocmedical.com).
 
 #### DoctorAI: Server Connection Error
 
@@ -198,10 +186,6 @@ export HF_HUB_OFFLINE=1
 ## What's Next? 🌟
 
 Discover upcoming features on our roadmap in the [DoctorAI Documentation](https://teledocmedical.com).
-
-## License 📜
-
-This project is licensed under the [BSD-3-Clause License](LICENSE) - see the [LICENSE](LICENSE) file for details. 📄
 
 ## Support 💬
 
