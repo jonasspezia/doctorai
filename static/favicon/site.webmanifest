@@ -1,6 +1,6 @@
 {
   "name": "DoctorAI",
-  "short_name": "WebUI",
+  "short_name": "DocAI",
   "icons": [
     {
       "src": "/favicon/web-app-manifest-192x192.png",
