@@ -4,19 +4,19 @@ import logging
 import sys
 import time
 
-from open_webui.models.users import Users, UserNameResponse
-from open_webui.models.channels import Channels
-from open_webui.models.chats import Chats
+from teledocai.models.users import Users, UserNameResponse
+from teledocai.models.channels import Channels
+from teledocai.models.chats import Chats
 
-from open_webui.env import (
+from teledocai.env import (
     ENABLE_WEBSOCKET_SUPPORT,
     WEBSOCKET_MANAGER,
     WEBSOCKET_REDIS_URL,
 )
-from open_webui.utils.auth import decode_token
-from open_webui.socket.utils import RedisDict, RedisLock
+from teledocai.utils.auth import decode_token
+from teledocai.socket.utils import RedisDict, RedisLock
 
-from open_webui.env import (
+from teledocai.env import (
     GLOBAL_LOG_LEVEL,
     SRC_LOG_LEVELS,
 )
@@ -54,9 +54,9 @@ TIMEOUT_DURATION = 3
 
 if WEBSOCKET_MANAGER == "redis":
     log.debug("Using Redis to manage websockets.")
-    SESSION_POOL = RedisDict("open-webui:session_pool", redis_url=WEBSOCKET_REDIS_URL)
-    USER_POOL = RedisDict("open-webui:user_pool", redis_url=WEBSOCKET_REDIS_URL)
-    USAGE_POOL = RedisDict("open-webui:usage_pool", redis_url=WEBSOCKET_REDIS_URL)
+    SESSION_POOL = RedisDict("teledocai:session_pool", redis_url=WEBSOCKET_REDIS_URL)
+    USER_POOL = RedisDict("teledocai:user_pool", redis_url=WEBSOCKET_REDIS_URL)
+    USAGE_POOL = RedisDict("teledocai:usage_pool", redis_url=WEBSOCKET_REDIS_URL)
 
     clean_up_lock = RedisLock(
         redis_url=WEBSOCKET_REDIS_URL,

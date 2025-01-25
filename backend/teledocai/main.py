@@ -45,11 +45,11 @@ from starlette.middleware.sessions import SessionMiddleware
 from starlette.responses import Response, StreamingResponse
 
 
-from open_webui.socket.main import (
+from teledocai.socket.main import (
     app as socket_app,
     periodic_usage_pool_cleanup,
 )
-from open_webui.routers import (
+from teledocai.routers import (
     audio,
     images,
     ollama,
@@ -75,19 +75,19 @@ from open_webui.routers import (
     utils,
 )
 
-from open_webui.routers.retrieval import (
+from teledocai.routers.retrieval import (
     get_embedding_function,
     get_ef,
     get_rf,
 )
 
-from open_webui.internal.db import Session
+from teledocai.internal.db import Session
 
-from open_webui.models.functions import Functions
-from open_webui.models.models import Models
-from open_webui.models.users import UserModel, Users
+from teledocai.models.functions import Functions
+from teledocai.models.models import Models
+from teledocai.models.users import UserModel, Users
 
-from open_webui.config import (
+from teledocai.config import (
     # Ollama
     ENABLE_OLLAMA_API,
     OLLAMA_BASE_URLS,
@@ -264,7 +264,7 @@ from open_webui.config import (
     AppConfig,
     reset_config,
 )
-from open_webui.env import (
+from teledocai.env import (
     CHANGELOG,
     GLOBAL_LOG_LEVEL,
     SAFE_MODE,
@@ -283,28 +283,28 @@ from open_webui.env import (
 )
 
 
-from open_webui.utils.models import (
+from teledocai.utils.models import (
     get_all_models,
     get_all_base_models,
     check_model_access,
 )
-from open_webui.utils.chat import (
+from teledocai.utils.chat import (
     generate_chat_completion as chat_completion_handler,
     chat_completed as chat_completed_handler,
     chat_action as chat_action_handler,
 )
-from open_webui.utils.middleware import process_chat_payload, process_chat_response
-from open_webui.utils.access_control import has_access
+from teledocai.utils.middleware import process_chat_payload, process_chat_response
+from teledocai.utils.access_control import has_access
 
-from open_webui.utils.auth import (
+from teledocai.utils.auth import (
     decode_token,
     get_admin_user,
     get_verified_user,
 )
-from open_webui.utils.oauth import oauth_manager
-from open_webui.utils.security_headers import SecurityHeadersMiddleware
+from teledocai.utils.oauth import oauth_manager
+from teledocai.utils.security_headers import SecurityHeadersMiddleware
 
-from open_webui.tasks import stop_task, list_tasks  # Import from tasks.py
+from teledocai.tasks import stop_task, list_tasks  # Import from tasks.py
 
 if SAFE_MODE:
     print("SAFE MODE ENABLED")
@@ -338,7 +338,7 @@ print(
 
 v{VERSION} - building the best open-source AI user interface.
 {f"Commit: {WEBUI_BUILD_HASH}" if WEBUI_BUILD_HASH != "dev-build" else ""}
-https://github.com/open-webui/open-webui
+https://github.com/teledocai/teledocai
 """
 )
 
@@ -1073,7 +1073,7 @@ async def get_app_latest_release_version():
         timeout = aiohttp.ClientTimeout(total=1)
         async with aiohttp.ClientSession(timeout=timeout, trust_env=True) as session:
             async with session.get(
-                "https://api.github.com/repos/open-webui/open-webui/releases/latest"
+                "https://api.github.com/repos/teledocai/teledocai/releases/latest"
             ) as response:
                 response.raise_for_status()
                 data = await response.json()

@@ -144,12 +144,12 @@ Encountering connection issues? Our [DoctorAI Documentation](https://teledocmedi
 
 #### DoctorAI: Server Connection Error
 
-If you're experiencing connection issues, it’s often due to the WebUI docker container not being able to reach the Ollama server at 127.0.0.1:11434 (host.docker.internal:11434) inside the container . Use the `--network=host` flag in your docker command to resolve this. Note that the port changes from 3000 to 8080, resulting in the link: `http://localhost:8080`.
+If you're experiencing connection issues, it’s often due to the TeledocAI docker container not being able to reach the Ollama server at 127.0.0.1:11434 (host.docker.internal:11434) inside the container . Use the `--network=host` flag in your docker command to resolve this. Note that the port changes from 3000 to 8080, resulting in the link: `http://localhost:8080`.
 
 **Example Docker Command**:
 
 ```bash
-docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+docker run -d --network=host -v teledocai:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name teledocai --restart always ghcr.io/teledocai/teledocai:main
 ```
 
 ### Keeping Your Docker Installation Up-to-Date
@@ -157,10 +157,10 @@ docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=
 In case you want to update your local Docker installation to the latest version, you can do it with [Watchtower](https://teledocmedical.com):
 
 ```bash
-docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once open-webui
+docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once teledocai
 ```
 
-In the last part of the command, replace `open-webui` with your container name if it is different.
+In the last part of the command, replace `teledocai` with your container name if it is different.
 
 Check our Migration Guide available in our [DoctorAI Documentation](https://teledocmedical.com).
 
@@ -172,7 +172,7 @@ Check our Migration Guide available in our [DoctorAI Documentation](https://tele
 If you want to try out the latest bleeding-edge features and are okay with occasional instability, you can use the `:dev` tag like this:
 
 ```bash
-docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui --add-host=host.docker.internal:host-gateway --restart always ghcr.io/open-webui/open-webui:dev
+docker run -d -p 3000:8080 -v teledocai:/app/backend/data --name teledocai --add-host=host.docker.internal:host-gateway --restart always ghcr.io/teledocai/teledocai:dev
 ```
 
 ### Offline Mode

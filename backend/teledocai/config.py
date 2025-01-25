@@ -12,19 +12,19 @@ import requests
 from pydantic import BaseModel
 from sqlalchemy import JSON, Column, DateTime, Integer, func
 
-from open_webui.env import (
+from teledocai.env import (
     DATA_DIR,
     DATABASE_URL,
     ENV,
     FRONTEND_BUILD_DIR,
     OFFLINE_MODE,
-    OPEN_WEBUI_DIR,
+    TELEDOCAI_DIR,
     WEBUI_AUTH,
     WEBUI_FAVICON_URL,
     WEBUI_NAME,
     log,
 )
-from open_webui.internal.db import Base, get_db
+from teledocai.internal.db import Base, get_db
 
 
 class EndpointFilter(logging.Filter):
@@ -47,10 +47,10 @@ def run_migrations():
         from alembic import command
         from alembic.config import Config
 
-        alembic_cfg = Config(OPEN_WEBUI_DIR / "alembic.ini")
+        alembic_cfg = Config(TELEDOCAI_DIR / "alembic.ini")
 
         # Set the script location dynamically
-        migrations_path = OPEN_WEBUI_DIR / "migrations"
+        migrations_path = TELEDOCAI_DIR / "migrations"
         alembic_cfg.set_main_option("script_location", str(migrations_path))
 
         command.upgrade(alembic_cfg, "head")
@@ -114,10 +114,7 @@ DEFAULT_CONFIG = {
                 "content": "Help me study vocabulary: write a sentence for me to fill in the blank, and I'll try to pick the correct option.",
             },
             {
-                "title": [
-                    "Give me ideas",
-                    "for what to do with my kids' art",
-                ],
+                "title": ["Give me ideas", "for what to do with my kids' art"],
                 "content": "What are 5 creative things I could do with my kids' art? I don't want to throw them away, but it's also so much clutter.",
             },
             {
@@ -125,10 +122,7 @@ DEFAULT_CONFIG = {
                 "content": "Tell me a random fun fact about the Roman Empire",
             },
             {
-                "title": [
-                    "Show me a code snippet",
-                    "of a website's sticky header",
-                ],
+                "title": ["Show me a code snippet", "of a website's sticky header"],
                 "content": "Show me a code snippet of a website's sticky header in CSS and JavaScript.",
             },
             {
@@ -584,7 +578,7 @@ load_oauth_providers()
 # Static DIR
 ####################################
 
-STATIC_DIR = Path(os.getenv("STATIC_DIR", OPEN_WEBUI_DIR / "static")).resolve()
+STATIC_DIR = Path(os.getenv("STATIC_DIR", TELEDOCAI_DIR / "static")).resolve()
 
 frontend_favicon = FRONTEND_BUILD_DIR / "static" / "favicon.png"
 

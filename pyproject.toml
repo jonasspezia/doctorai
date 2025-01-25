@@ -1,5 +1,5 @@
 [project]
-name = "open-webui"
+name = "teledocai"
 description = "DoctorAI"
 authors = [
     { name = "Dr. Jonas Spezia | CRMRS52340 | CEO Teledoc", email = "teledoc@teledocmedical.com" }
@@ -125,7 +125,7 @@ classifiers = [
 ]
 
 [project.scripts]
-open-webui = "open_webui:app"
+teledocai = "open_webui:app"
 
 [build-system]
 requires = ["hatchling"]
@@ -157,7 +157,7 @@ exclude = [
     "webui.db",
     "chroma.sqlite3",
 ]
-force-include = { "CHANGELOG.md" = "open_webui/CHANGELOG.md", build = "open_webui/frontend" }
+force-include = { "CHANGELOG.md" = "teledocai/CHANGELOG.md", build = "teledocai/frontend" }
 
 [tool.codespell]
 # Ref: https://github.com/codespell-project/codespell#using-a-config-file

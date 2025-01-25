@@ -16,12 +16,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 
-from open_webui.config import CACHE_DIR
-from open_webui.constants import ERROR_MESSAGES
-from open_webui.env import ENV, SRC_LOG_LEVELS, ENABLE_FORWARD_USER_INFO_HEADERS
+from teledocai.config import CACHE_DIR
+from teledocai.constants import ERROR_MESSAGES
+from teledocai.env import ENV, SRC_LOG_LEVELS, ENABLE_FORWARD_USER_INFO_HEADERS
 
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.utils.images.comfyui import (
+from teledocai.utils.auth import get_admin_user, get_verified_user
+from teledocai.utils.images.comfyui import (
     ComfyUIGenerateImageForm,
     ComfyUIWorkflow,
     comfyui_generate_image,

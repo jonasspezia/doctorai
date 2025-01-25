@@ -16,28 +16,28 @@ from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel
 from starlette.background import BackgroundTask
 
-from open_webui.models.models import Models
-from open_webui.config import (
+from teledocai.models.models import Models
+from teledocai.config import (
     CACHE_DIR,
 )
-from open_webui.env import (
+from teledocai.env import (
     AIOHTTP_CLIENT_TIMEOUT,
     AIOHTTP_CLIENT_TIMEOUT_OPENAI_MODEL_LIST,
     ENABLE_FORWARD_USER_INFO_HEADERS,
     BYPASS_MODEL_ACCESS_CONTROL,
 )
 
-from open_webui.constants import ERROR_MESSAGES
-from open_webui.env import ENV, SRC_LOG_LEVELS
+from teledocai.constants import ERROR_MESSAGES
+from teledocai.env import ENV, SRC_LOG_LEVELS
 
 
-from open_webui.utils.payload import (
+from teledocai.utils.payload import (
     apply_model_params_to_body_openai,
     apply_model_system_prompt_to_body,
 )
 
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.utils.access_control import has_access
+from teledocai.utils.auth import get_admin_user, get_verified_user
+from teledocai.utils.access_control import has_access
 
 
 log = logging.getLogger(__name__)

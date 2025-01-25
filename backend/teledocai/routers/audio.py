@@ -27,15 +27,15 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 
-from open_webui.utils.auth import get_admin_user, get_verified_user
-from open_webui.config import (
+from teledocai.utils.auth import get_admin_user, get_verified_user
+from teledocai.config import (
     WHISPER_MODEL_AUTO_UPDATE,
     WHISPER_MODEL_DIR,
     CACHE_DIR,
 )
 
-from open_webui.constants import ERROR_MESSAGES
-from open_webui.env import (
+from teledocai.constants import ERROR_MESSAGES
+from teledocai.env import (
     ENV,
     SRC_LOG_LEVELS,
     DEVICE_TYPE,

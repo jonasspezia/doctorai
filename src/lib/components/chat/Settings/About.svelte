@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { getVersionUpdates } from '$lib/apis';
 	import { getOllamaVersion } from '$lib/apis/ollama';
-	import { WEBUI_BUILD_HASH, WEBUI_VERSION } from '$lib/constants';
-	import { WEBUI_NAME, config, showChangelog } from '$lib/stores';
+	import { TELEDOCAI_BUILD_HASH, TELEDOCAI_VERSION } from '$lib/constants';
+	import { TELEDOCAI_NAME, config, showChangelog } from '$lib/stores';
 	import { compareVersion } from '$lib/utils';
 	import { onMount, getContext } from 'svelte';
 
@@ -22,8 +22,8 @@
 		updateAvailable = null;
 		version = await getVersionUpdates(localStorage.token).catch((error) => {
 			return {
-				current: WEBUI_VERSION,
-				latest: WEBUI_VERSION
+				current: TELEDOCAI_VERSION,
+				latest: TELEDOCAI_VERSION
 			};
 		});
 
@@ -47,17 +47,20 @@
 		<div>
 			<div class=" mb-2.5 text-sm font-medium flex space-x-2 items-center">
 				<div>
-					{$WEBUI_NAME}
+					{$TELEDOCAI_NAME}
 					{$i18n.t('Version')}
+					<Tooltip
+						text={`Build Hash: ${TELEDOCAI_BUILD_HASH}`}
+					>
+						<span class="text-xs text-gray-500 ml-1 cursor-pointer">
+							{TELEDOCAI_VERSION}
+						</span>
+					</Tooltip>
 				</div>
 			</div>
 			<div class="flex w-full justify-between items-center">
 				<div class="flex flex-col text-xs text-gray-700 dark:text-gray-200">
 					<div class="flex gap-1">
-						<Tooltip content={WEBUI_BUILD_HASH}>
-							v{WEBUI_VERSION}
-						</Tooltip>
-
 						<a
 							href="https://github.com/open-webui/open-webui/releases/tag/v{version.latest}"
 							target="_blank"
@@ -172,8 +175,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		</div>
 
 		<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
-			{#if !$WEBUI_NAME.includes('Open WebUI')}
-				<span class=" text-gray-500 dark:text-gray-300 font-medium">{$WEBUI_NAME}</span> -
+			{#if !$TELEDOCAI_NAME.includes('Open WebUI')}
+				<span class=" text-gray-500 dark:text-gray-300 font-medium">{$TELEDOCAI_NAME}</span> -
 			{/if}
 			{$i18n.t('Created by')}
 			<a
